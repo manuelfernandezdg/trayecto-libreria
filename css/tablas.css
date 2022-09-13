@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.color {
+    color: #07020D;
+    color: #5DB7DE;
+    color: #F1E9DB;
+    color: #A39B8B;
+    color: #716A5C;
+    color: #07020da7;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Tablas */
+
+table {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #F1E9DB;
+    text-align: center;
+    border: 2px solid #716A5C; /* borde exterior de la tabla */
+    border-collapse: collapse; /* elimina la distancia entre celdas */
+}
+
+img {
+    width: 150px;
+}
+
+th {
+    border-bottom: 2px solid #716A5C; /* agrega el borde a los encabezados */
+    font-size: 24px;
+    background-color: #5DB7DE;
+    padding: 16px;
+}
+
+td {
+    border: 2px solid #07020D; /* agrega el borde a las celdas */
+    padding: 16px;
+}
+
+/*Admite números enteros, y también expresiones: odd (impares) y even (pares)*/
+tr:nth-child(even) {
+    background-color: #A39B8B;
+    font-weight: 900;
+}
+
+tr:nth-child(odd) {
+    background-color: #716A5C;
+    font-weight: 400;
+}
+
+tr:hover {
+    background-color: #5DB7DE;
+}
+
+/* Video */
+section {
+    width: 90%;
+    margin: 32px auto;
+}
+
+video {
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}

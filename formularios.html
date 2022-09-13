@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="css/formularios.css">
+</head>
+<body>
+    <section>
+        <h1>Formularios</h1>
+        <form action="">
+
+            <label>Ingrese su nombre: 
+                <input type="text" name="nombre" maxlength="15" required>
+            </label>
+
+            <label>
+                Ingrese su apellido:
+                <input type="text" name="apellido" maxlength="15">
+            </label>
+
+            <label>
+                Ingrese su email:
+                <input type="email" name="email" placeholder="usuario@dominio.com" required>
+            </label>
+
+            <label>
+                Edad:
+                <input type="number" name="edad" min="18" max="150">
+            </label>
+
+            <label>
+                Mensaje:
+                <textarea name="mensaje" maxlength="250" placeholder="Ingresar mensaje"></textarea>
+            </label>
+
+            <div class="opciones">
+                <label>
+                    Opción 1
+                    <input class="checkbox" type="checkbox" value="Opción 1" name="opcion1">
+                </label>
+                <label>
+                    Opción 2
+                    <input class="checkbox" type="checkbox" value="Opción 2" name="opcion2">
+                </label>
+                <label>
+                    Opción 3
+                    <input class="checkbox" type="checkbox" value="Opción 3" name="opcion3">
+                </label>
+            </div>
+
+            <div class="newsletter">
+                <p>¿Querés recibir nuestro newsletter?</p>
+                <label>
+                    Si
+                    <input type="radio" name="newsletter" value="si" checked required>
+                </label>
+                <label>
+                    No
+                    <input type="radio" name="newsletter" value="no" required>
+                </label>
+            </div>
+
+            <div>
+                <label>
+                    ¿Acepta los térmninos y condiciones?, Si acepto
+                    <input type="checkbox" class="checkbox" name="terminos" value="si" required>
+                </label>
+            </div>
+
+            <select name="provincia" id="provincia">
+                <option value="Ciudad de Buenos Aires">Ciudad de Buenos Aires</option>
+                <option value="Buenos Aires">Buenos Aires</option>
+                <option value="Catamarca">Catamarca</option>
+                <option value="Chaco">Chaco</option>
+                <option value="Chubut">Chubut</option>
+                <option value="Córdoba">Córdoba</option>
+                <option value="Corrientes">Corrientes</option>
+                <option value="Entre Ríos">Entre Ríos</option>
+                <option value="Formosa">Formosa</option>
+                <option value="Jujuy">Jujuy</option>
+                <option value="La Pampa">La Pampa</option>
+                <option value="La Rioja">La Rioja</option>
+                <option value="Mendoza">Mendoza</option>
+                <option value="Misiones">Misiones</option>
+                <option value="Neuquén">Neuquén</option>
+                <option value="Río Negro">Río Negro</option>
+                <option value="Salta">Salta</option>
+                <option value="San Juan">San Juan</option>
+                <option value="San Luis">San Luis</option>
+                <option value="Santa Cruz">Santa Cruz</option>
+                <option value="Santa Fe">Santa Fe</option>
+                <option value="Santiago del Estero">Santiago del Estero</option>
+                <option value="Tierra del Fuego">Tierra del Fuego</option>
+                <option value="Tucuman">Tucuman</option>
+            </select>
+
+            <button>
+                <img class="lupa" src="img/lupa.svg" alt="">
+            </button>
+
+            <input type="submit" name="enviar" value="Enviar">
+        </form>
+    </section>
+</body>
+</html>

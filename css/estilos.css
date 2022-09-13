@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.color {
+    color: #07020D;
+    color: #5DB7DE;
+    color: #F1E9DB;
+    color: #A39B8B;
+    color: #716A5C;
+    color: #07020da7;
+}
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Encabezado Principal */
+header {
+    background-color: #07020D;
+    padding: 32px 0; /* superior e inferior, 0 a la izquierda y derecha */
+    border-bottom: 3px solid #5DB7DE ;/* grosor tipo color */
+    width: 50%;
+}
+
+.contenedor-header {
+    width: 50%; /*  */
+    background-color: #716A5C;
+    margin: 0 auto;
+    display: flex; /* aplicamos flex al header */
+    gap: 32px;
+    justify-content: space-between; /* alineación horizontal */
+    align-items: center; /* alineación vertical */
+}
+
+.nav-items {
+    display: inline-block; /* Cambia la propiedad de bloque a línea */
+    padding: 16px;
+    margin: 12px;
+}
+
+/*-- Trabajo con links --*/
+/* Link en reposo */
+a.nav-link:link {
+    color: #F1E9DB;
+    text-decoration: none;
+}
+
+/* Link visitado */
+a.nav-link:visited {
+    color: #F1E9DB;
+}
+
+/* Cuando pasamos por arriba con el cursor */
+a.nav-link:hover {
+    color: #5DB7DE;
+}
+
+/* Cuando hacemos click sobre el link */
+a.nav-link:active {
+    color: #5DB7DE;
+}
+
+
+/* Sección de bienvenida */
+.bienvenida {
+    background-color: brown;
+    width: 1000px;
+    margin: 0 auto;
+    height: 550px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+
+    background-image: url('../img/bienvenida.jpg');
+    background-size: cover;
+}
+
+/* Un elemento tiene la clase bienvenida y a su vez anida un h1, entonces se aplican las siguientes propiedades: */
+.bienvenida > h1 {
+    background-color: #07020da7;
+    color: #F1E9DB;
+    padding: 32px;
+    text-align: center;
+}
+
+
+
+
+/* Pié de página */

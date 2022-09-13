@@ -1,0 +1,81 @@
+/* selector universal */
+* {
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+form {
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+input {
+    width: 200px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px inset rgb(222, 5, 5);
+    outline: none;
+    background-color: aqua;
+}
+
+textarea {
+    width: 200px;
+    height: 150px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 2px inset rgb(222, 5, 5);
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px inset rgb(23, 222, 5);
+    background-color: rgb(5, 66, 66);
+}
+
+input:hover,
+textarea:hover {
+    border: 2px inset rgb(23, 222, 5);
+    background-color: rgb(5, 66, 66);
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button {
+    width: 200px;
+    border: 2px inset rgb(222, 5, 5);
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    background-color: rgb(39, 39, 39);
+}
+
+button:hover {
+    background-color: rgb(19, 19, 19);
+}
+
+.lupa {
+    width: 15%;
+}
+
+/* Checkbox */
+.opciones {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkbox {
+    width: auto;
+}
