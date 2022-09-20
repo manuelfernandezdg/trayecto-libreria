@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de usuario nuevo</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body id="body">
+    <header id="header">
+        <div class="contenedor-header">
+            <a href="index.html"><img src="img/logo.svg" alt="La Librería | Libros Fantásticos"></a>
+            <nav>
+                <ul>
+                    <li><a class="nav" href="catalogo.html">Catálogo</a></li>
+                    <li><a class="nav" href="sobrenosotros.html">Sobre Nosotros</a></li>
+                    <li><a class="nav" href="contacto.html">Contacto</a></li>
+                    <li><a class="nav" href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <form class="busqueda">
+                <label>
+                    <input type="text" name="buscar">
+                </label>
+                <button><img src="img/lupa.svg" alt="Buscar"></button>
+            </form>
+        </div>
+    </header>
+    <main role="main">
+        <section id="registrarme">
+            <h1>Quiero registrarme en <strong>La Librería</strong></h1>
+            <form class="formulario" action="" method="POST" enctype="multipart/form-data">
+
+                <label for="usuario">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresá tu nombre" required>
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingresá tu apellido">
+                <label for="email">email</label>
+                <input type="email" id="email" name="email" placeholder="email@dominio.com" required>
+                <label for="password">Mi contraseña</label>
+                <input type="password" placeholder="Mi contraseña" required>
+                <label for="checkPassword">Confirmar contraseña</label>
+                <input type="password" id="checkPassword" name="checkPassword" placeholder="Volvé a escribir tu contraseña" required>
+                <label for="avatar">Mi avatar</label>
+                <input type="file" title="Si querés, podés elegir tu foto para tu perfil" id="avatar" >
+                <label for="provincia">Provincia</label>
+                <select name="provincia" id="provincia">
+                    <option value="Ciudad de Buenos Aires" selected="">Ciudad de Buenos Aires</option>
+                    <option value="Buenos Aires">Buenos Aires</option>
+                    <option value="Catamarca">Catamarca</option>
+                    <option value="Chaco">Chaco</option>
+                    <option value="Chubut">Chubut</option>
+                    <option value="Córdoba">Córdoba</option>
+                    <option value="Corrientes">Corrientes</option>
+                    <option value="Entre Ríos">Entre Ríos</option>
+                    <option value="Formosa">Formosa</option>
+                    <option value="Jujuy">Jujuy</option>
+                    <option value="La Pampa">La Pampa</option>
+                    <option value="La Rioja">La Rioja</option>
+                    <option value="Mendoza">Mendoza</option>
+                    <option value="Misiones">Misiones</option>
+                    <option value="Neuquén">Neuquén</option>
+                    <option value="Río Negro">Río Negro</option>
+                    <option value="Salta">Salta</option>
+                    <option value="San Juan">San Juan</option>
+                    <option value="San Luis">San Luis</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="Santa Fe">Santa Fe</option>
+                    <option value="Santiago del Estero">Santiago del Estero</option>
+                    <option value="Tierra del Fuego">Tierra del Fuego</option>
+                    <option value="Tucuman">Tucuman</option>
+                </select>
+                <label for="terminos">¿Acepta los términos y condiciones?</label>
+                <input id="terminos" name="terminos" class="opciones" type="checkbox" value="acepta" required> Si, acepto los términos y condiciones.
+                <label for="registro" class="sr-only">Registrarme</label>
+                <input class="submit" type="submit" id="registro" value="Registrarme">
+            </form>
+            <ul>
+                <li> <a href="#">¿Olvidaste tu contraseña?</a></li>
+                <li> <a href="registro.html">Aún no tengo usuario, quiero registrarme</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li>Av. Rivadavia 1755 - CABA</li>
+            <li>011-4444-6666</li>
+            <li>contacto@lalibreria.com.ar</li>
+            <li><a href="#body">Ir arriba</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

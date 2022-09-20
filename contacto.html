@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envianos un mensaje</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header id="header">
+        <div class="contenedor-header">
+            <a href="index.html"><img src="img/logo.svg" alt="La Librería | Libros Fantásticos"></a>
+            <nav>
+                <ul>
+                    <li><a class="nav" href="catalogo.html">Catálogo</a></li>
+                    <li><a class="nav" href="sobrenosotros.html">Sobre Nosotros</a></li>
+                    <li><a class="nav" href="contacto.html">Contacto</a></li>
+                    <li><a class="nav" href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <form class="busqueda">
+                <label>
+                    <input type="text" name="buscar">
+                </label>
+                <button><img src="img/lupa.svg" alt="Buscar"></button>
+            </form>
+        </div>
+    </header>
+    <main role="main">
+        <section id="contacto">
+            <h1>Contacto</h1>
+            <form class="formulario" action="" method="" enctype="multipart/form-data">
+                <label>Tu nombre
+                    <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamás?">
+                </label>
+                <label>Email:
+                    <input type="email" name="email" placeholder="Dejanos tu email así podemos responderte pronto">
+                </label>
+                <label>Tu mensaje</label>
+                <textarea name="mensaje" id="mensaje"></textarea>
+                <label>
+                    ¿Te gustaría recibir novedades por email?
+                    <input class="opciones" type="radio" name="newsletter" value="si" checked>Si
+                    <input class="opciones" type="radio" name="newsletter" value="no">No
+                </label>
+                <label>
+                    Antes de continuar, ¿aceptás nuestros términos y condiciones? <input class="opciones" type="checkbox" name="acepta" value="acepta" required> Si, acepto los términos y condiciones.
+                </label>
+                <label for="enviar" class="sr-only">Enviar mensaje</label>
+                <input class="submit" type="submit" id="enviar" value="Enviar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li>Av. Rivadavia 1755 - CABA</li>
+            <li>011-4444-6666</li>
+            <li>contacto@lalibreria.com.ar</li>
+            <li><a href="#header">Ir arriba</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

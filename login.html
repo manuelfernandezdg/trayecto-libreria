@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In | Ingresar o Registrarte</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body id="body">
+    <header id="header">
+        <div class="contenedor-header">
+            <a href="index.html"><img src="img/logo.svg" alt="La Librería | Libros Fantásticos"></a>
+            <nav>
+                <ul>
+                    <li><a class="nav" href="catalogo.html">Catálogo</a></li>
+                    <li><a class="nav" href="sobrenosotros.html">Sobre Nosotros</a></li>
+                    <li><a class="nav" href="contacto.html">Contacto</a></li>
+                    <li><a class="nav" href="login.html">Login</a></li>
+                </ul>
+            </nav>
+            <form class="busqueda">
+                <label>
+                    <input type="text" name="buscar">
+                </label>
+                <button><img src="img/lupa.svg" alt="Buscar"></button>
+            </form>
+        </div>
+    </header>
+    <main role="main">
+        <section id="logIn">
+            <h1>Ingresar con mi usuario</h1>
+            <p>(Tu usuario es el email que usaste a la hora de registrarte)</p>
+            <form class="formulario" action="" method="POST">
+                <label for="usuario">Mi usuario</label>
+                <input title="Tip: Podés usar el email con el que te registraste en nuestra página." type="text" id="usuario" placeholder="Mi usuario" required>
+                <label for="password">Mi contraseña</label>
+                <input type="password" placeholder="Mi contraseña" required>
+                <label class="sr-only" for="ingresar"></label>
+                <label for="login" class="sr-only">Ingresar | Log In</label>
+                <input class="submit" type="submit" id="login" value="Ingresar">
+            </form>
+            <ul>
+                <li> <a href="">¿Olvidaste tu contraseña?</a></li>
+                <li> <a href="registro.html">Aún no tengo usuario, quiero registrarme</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li>Av. Rivadavia 1755 - CABA</li>
+            <li>011-4444-6666</li>
+            <li>contacto@lalibreria.com.ar</li>
+            <li><a href="#body">Ir arriba</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

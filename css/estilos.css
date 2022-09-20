@@ -1,97 +1,367 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.color {
-    color: #07020D;
-    color: #5DB7DE;
-    color: #F1E9DB;
-    color: #A39B8B;
-    color: #716A5C;
-    color: #07020da7;
+:root {
+    --color-negro:#07020D;
+    --color-blanco:#FFFFFF;
+    --color-blanco-2:#F1E9DB;
+    --color-acento:#5DB7DE;
+    --color-marron1:#A39B8B;
+    --color-marron2:#716A5C;
 }
 
-/* Estilos generales */
+/* Estilos globales */
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
 body {
+    color: var(--color-negro);
+    background-color: var(--color-blanco-2);
     margin: 0;
-    font-family: 'Poppins', sans-serif;
 }
 
+p {
+    line-height: 1.5;
+}
+
+/* Listas con Flex*/
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-/* Encabezado Principal */
+/* ---------------- Header y Barra de Navegación ---------------- */
 header {
-    background-color: #07020D;
-    padding: 32px 0; /* superior e inferior, 0 a la izquierda y derecha */
-    border-bottom: 3px solid #5DB7DE ;/* grosor tipo color */
-    width: 50%;
+    background-color:var(--color-negro);
+    text-align: center;
+    
+    padding: 35px 0 20px;
 }
 
 .contenedor-header {
-    width: 50%; /*  */
-    background-color: #716A5C;
+    width: 1250px;
     margin: 0 auto;
-    display: flex; /* aplicamos flex al header */
-    gap: 32px;
-    justify-content: space-between; /* alineación horizontal */
-    align-items: center; /* alineación vertical */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav-items {
-    display: inline-block; /* Cambia la propiedad de bloque a línea */
-    padding: 16px;
-    margin: 12px;
-}
-
-/*-- Trabajo con links --*/
-/* Link en reposo */
-a.nav-link:link {
-    color: #F1E9DB;
+/* Links de la barra de navegación */
+a.nav:link {
+    color: var(--color-blanco-2);
     text-decoration: none;
+    display: inline-block;
+    margin: 0 15px;
 }
 
-/* Link visitado */
-a.nav-link:visited {
-    color: #F1E9DB;
+a.nav:visited {
+    color: var(--color-blanco-2);
 }
 
-/* Cuando pasamos por arriba con el cursor */
-a.nav-link:hover {
-    color: #5DB7DE;
+a.nav:hover {
+    color: var(--color-acento);
 }
 
-/* Cuando hacemos click sobre el link */
-a.nav-link:active {
-    color: #5DB7DE;
+a.nav:active {
+    color: var(--color-acento);
 }
 
+/* Buscador */
+.busqueda {
+    display: flex;
+    justify-content: center;
+}
 
-/* Sección de bienvenida */
-.bienvenida {
-    background-color: brown;
-    width: 1000px;
-    margin: 0 auto;
+.busqueda input,
+.busqueda button {
+    height: 50px;
+    padding: 4px 12px;
+    border: none;
+    outline: none;
+}
+
+.busqueda input:focus {
+    border: 2px solid var(--color-acento);
+    border-right: none;
+}
+
+.busqueda input {
+    border-radius: 16px 0 0 16px;
+    border: 2px solid var(--color-marron1);
+    border-right: none;
+}
+
+.busqueda button {
+    background-color: var(--color-acento);
+    border-radius: 0 16px 16px 0;
+    border: 2px solid var(--color-acento);
+    width: 60px;
+}
+
+.busqueda img {
+    width: 100%;
+}
+
+/* ---------------- Secciones ---------------- */
+section {
+    width: 1250px;
+    text-align: center;
+    margin: 25px auto;
+}
+
+/* ---------------- Sección de Bienvenida ---------------- */
+#bienvenida {
     height: 550px;
+    margin: 25px auto 0;
+
+    background-image: url('../img/bienvenida_sm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
-
-    background-image: url('../img/bienvenida.jpg');
-    background-size: cover;
 }
 
-/* Un elemento tiene la clase bienvenida y a su vez anida un h1, entonces se aplican las siguientes propiedades: */
-.bienvenida > h1 {
-    background-color: #07020da7;
+.bienvenidaTitulo {
+    background-color: #07020d9d;
     color: #F1E9DB;
-    padding: 32px;
-    text-align: center;
+    padding: 20px;
 }
 
+/* ---------------- Sección de Novedades ---------------- */
 
+/* artículos */
+.contenedor-novedades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+}
 
+article {  
+    width: 247px;
+    margin: 15px auto 25px;
 
-/* Pié de página */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: 600;
+
+    margin: 0;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 400;
+
+    margin: 0;
+}
+
+/* Links de las novedades */
+a.novedades:link {
+    display: block;
+    text-decoration: none;
+    padding: 12px 0;
+    margin-top: 12px;
+    color: #07020D;
+    border: 3px solid #5DB7DE;
+    border-radius: 16px;
+}
+
+a.novedades:visited {
+    color: #07020D;
+    border: 3px solid #5DB7DE;
+}
+
+a.novedades:hover {
+    color: #07020D;
+    border: 3px solid #07020D;
+    background-color: #5DB7DE;
+}
+
+a.novedades:active {
+    color: #07020D;
+    border: 3px solid #07020D;
+    background-color: #5DB7DE;
+}
+
+/* ---------------- Detalle del Libro ---------------- */
+#detalleProducto {
+    width: 650px;
+    margin: 0 auto;
+}
+
+#detalleProducto > h2 {
+    font-size: 28px;
+}
+
+#detalleProducto > p {
+    text-align: left;
+}
+
+#detalleProducto > aside {
+    font-style: italic;
+    width: 320px;
+    margin: 0 auto;
+}
+
+/* ---------------- Formularios ---------------- */
+/* Login, Contacto, Registro */
+#logIn li {
+    display: block;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+    display: block; /* agrega los saltos de línea*/
+    width: 450px; /* ancho */
+    margin: 15px auto; /* centra el elemento */
+
+    padding: 10px; /* área del texto */
+
+    border-radius: 0px;  /* ajuste del radio de las esquinas */
+    border: none;
+    border-bottom: 2px solid var(--color-marron2);
+
+    outline: none;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+    border-bottom: 2px solid var(--color-acento);
+}
+
+.formulario textarea {
+    height: 200px;
+}
+
+.formulario .opciones {
+    display: inline-block; /* línea bloque, no tiene saltos de línea y el ancho del elemento es fijado por su contenido. */
+    width: auto;
+    margin: 5px;
+}
+
+.formulario .submit {
+    background-color: var(--color-acento);
+    font-weight: 700;
+    border: none;
+}
+
+/* ---------------- Catálogo ---------------- */
+#catalogo table {
+    margin: 0 auto;
+    width: 1250px;
+}
+
+#catalogo img {
+    width: 150px;
+}
+
+#catalogo th, td {
+    padding: 16px;
+}
+
+#catalogo th {
+    background-color: var(--color-acento);
+}
+
+#catalogo td {
+    background-color: var(--color-marron1);
+}
+
+#catalogo tr:nth-child(odd) td {
+    background-color: var(--color-marron2);
+}
+
+#catalogo tr:hover td {
+    background-color: var(--color-acento);
+}
+
+/* ---------------- Sobre Nosotros ---------------- */
+#sobrenosotros {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 16px;
+    padding-top: 32px;
+}
+
+.direccion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.direccion > ul {
+    list-style: none;
+    padding: 0;
+}
+
+.direccion > ul > li {
+    display: inline-block;
+}
+
+#sobrenosotros video {
+    width: 65%;
+    height: auto;
+}
+
+#sobrenosotros p {
+    line-height: 20px;
+}
+
+#sobrenosotros i {
+    font-size: 32px;
+    margin-right: 32px;
+}
+
+#sobrenosotros iframe {
+    display: block;
+    width: 1250px;
+    margin: 32px auto;
+    border: none;
+    height: 600px;
+}
+
+/* ---------------- Pié de Página ---------------- */
+footer {
+    background-color: #716A5C;
+    color: var(--color-blanco-2);
+    font-weight: 600;
+    text-align: center;
+
+    padding: 75px;
+}
+/* Lista del Footer */
+
+footer > ul > li {
+    margin: 0 15px;
+}
